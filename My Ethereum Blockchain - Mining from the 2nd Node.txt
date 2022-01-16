@@ -1,0 +1,21 @@
+To Start Mining in the 2nd Node :
+
+SSH to 2nd Node
+
+Type below command in the 2nd node
+
+- miner.start()
+
+If it shows the error saying that coinbase needs to be specified explicitly. Run below command
+
+miner.setEtherbase("Your_Coinbase_Address)
+
+- mine.start()
+
+To stop mining process. enter below command
+
+- mine.stop()
+
+To check the balance :
+
+- web3.fromWei(web3.eth.getBalance(web3.eth.accounts[0]), 'ether')
