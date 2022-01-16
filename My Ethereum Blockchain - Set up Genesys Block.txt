@@ -1,0 +1,50 @@
+Set up a genesis block
+==================
+
+Step 4:
+======
+
+On Node 1 = > Initialize Genesis block in genesis.json (/home/ubuntu/eth-dev/) directory 
+
+- cd ~
+- mkdir eth-dev
+- cd eth-dev
+- nano genesis.json
+
+Below the Json script forthe genesis block creation,
+
+{
+  "config": {
+    "chainId": 326584,
+    "homesteadBlock": 0,
+    "eip155Block": 0,
+    "eip158Block": 0
+  },
+  "coinbase": "0x0000000000000000000000000000000000000000",
+  "difficulty": "0x20000",
+  "extraData": "",
+  "gasLimit": "0x2fefd8",
+  "nonce": "0x0000000000000042",
+  "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+  "timestamp": "0x00",
+  "alloc": {}
+}
+
+Note : Change chainId to some random number.
+
+To Initialize the chain data use the below command :
+- geth --datadir ~/eth-dev/ init genesis.json
+
+To Start the Ethereum Node 1 :
+
+- geth --datadir ~/eth-dev/ --networkid 326584 --verbosity 3 --ipcdisable --rpc --port 30301 --rpcport 8545 --rpccorsdomain "*" --rpcvhosts=* --rpcaddr <Public DNS address of your Node 1> --nodiscover --rpcapi="admin,db,eth,debug,miner,net,shh,txpool,personal,web3" console 2>> ~/eth-dev/eth.log
+
+
+Note : Network id and Chain Id should be same. 
+
+To view the log file : 
+
+Open a new terminal for Node 1 server :
+
+- tail -F ~/eth-dev/eth.log
