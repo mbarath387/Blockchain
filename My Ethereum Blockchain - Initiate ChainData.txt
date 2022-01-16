@@ -1,0 +1,22 @@
+Initilize the Chain Data in the Node 2
+============================
+
+Step 5 :
+======
+
+On Node 2, Initialize Genesis Block in genesis.json inside /home/ubuntu/eth-dev/ directory.
+- cd ~
+- mkdir eth-dev
+- cd eth-dev
+- nano genesis.json
+
+Paste the same content in genesis.json as listed above for Node 1.
+
+To Initialize the chain data use the below command :
+- geth --datadir ~/eth-dev/ init genesis.json
+
+To Start the Ethereum Node :
+
+- geth --datadir ~/eth-dev/ --networkid 326584 --verbosity 3 --ipcdisable --rpc --port 30302 --rpcport 8546 --nodiscover --rpcapi="admin,db,eth,debug,miner,net,shh,txpool,personal,web3" console 2>> ~/eth-dev/eth.log
+
+Use the same networkid which you put as chainId in the genesis block.
