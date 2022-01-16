@@ -1,0 +1,45 @@
+Setting up my first Ethereum Blockchain 
+===============================
+
+Pre-requisites
+===========
+- Need at least two EC2 VMs
+- Linux => Ubuntu LTS (latest) 
+- Open Inbound ports 30301 - 30399
+
+Step 1 :
+======
+
+Launch Atleast two EC2 instances with Ubuntu 18.04 server in the AWS with inbound ports open (30301 -30399) in the security group
+
+
+Step 2 :
+======
+
+SSH into all the nodes => ssh -i <name.pem> ubuntu@<server's public IP>
+
+
+Step 3 :
+======
+
+Install Geth (Go Ethereum - It is command line interface for running Ethereum node [GO launguage]) client in all the nodes 
+
+- sudo apt-get install software-properties-common
+- sudo add-apt-repository -y ppa:ethereum/ethereum
+- sudo apt-get update
+- sudo apt-get install ethereum
+
+Use the below command to make sure Geth installed correctly on the all servers
+
+- geth --help (Result => Help page for Geth command)
+
+
+
+
+
+
+
+
+
+
+
