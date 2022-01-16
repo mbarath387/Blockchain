@@ -1,0 +1,12 @@
+To Create a new Account 
+====================
+
+Run the below comment in the Geth Console,
+
+- personal.newAccount()
+- Passphrase:
+- Repeat passphrase: "0x499fef9ab387514b14d01094ba9efe7a8641946a"
+
+Note : It will ask for a password. Do not lose this password in any case.
+
+Cope this coinbase address ( "0x499fef9ab387514b14d01094ba9efe7a8641946a" ) and keep it somewhere safe.
