@@ -1,0 +1,23 @@
+Connect Node 2 with Node 1 in Private Ethereum Blockchain Network
+=====================================================
+
+SSH Node 2
+
+Get the enode address of the node 2. Use the below command
+
+- admin.nodeInfo.enode
+
+Output Example :
+
+"enode://9798a27395435433353ec3414ac7e07e44744fbddb5974f3277615050f10bf0255d1aa91aa7721b2f87fd8c663f23a1abd2f5ebc5d89ca2c46777dee07f8b7ad@127.0.0.1:30302"
+
+To add node 2 private ip :
+
+"enode://9798a27395435433353ec3414ac7e07e44744fbddb5974f3277615050f10bf0255d1aa91aa7721b2f87fd8c663f23a1abd2f5ebc5d89ca2c46777dee07f8b7ad@<Your Node2 Private IP>:30302"
+
+
+SSH node1 and execute the below command :
+
+admin.addPeer("enode://<enode_address>@<Node2_Private_address>:30302")
+
+Output : Result should be TRUE
