@@ -1,0 +1,25 @@
+MetaMask Wallet
+=============
+
+Transfer ether to an address
+
+First to install the Metamask extension in the Chrome browser
+
+To connect the Metamask wallet to the node
+
+Fill the below columns in the Metamask wallet form
+
+- Network Name
+- New RPC URL
+
+To transfer the 200 Eth to the Metamask wallet account.
+
+SSH to Node1 
+
+Enter below command: 
+
+- eth.sendTransaction({from:eth.coinbase, to:”<MetaMask account address you just copied>”, value: web3.toWei(100, "ether")})
+
+To Unlock an Wallet account
+======================
+personal.unlockAccount(eth.coinbase, "<whatever your Coinbase password is>")
